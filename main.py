@@ -15,11 +15,15 @@ sd_model_path = "Lykon/dreamshaper-8"
 pipe = StableDiffusionImg2ImgPipeline.from_pretrained(
     sd_model_path,
     use_safetensors=True,
-    #torch_dtype=torch.float16,
+    # torch_dtype=torch.float16,
+)
+
+# torch
+torch_device = (
+    torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 )
 
 # pipe
-torch_device = "cpu"
 pipe = pipe.to(torch_device)
 
 # prompt
