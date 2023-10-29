@@ -3,4 +3,3 @@ diffusers
 accelerate
 transformers
 xformers
-numpy
