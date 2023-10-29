@@ -6,14 +6,14 @@ A simple example showing how to use "Stable Diffusion" and "Python".
 
 ## Results - TXT TO IMG
 
-<a href="https://github.com/paulocoutinhox/ai-sd-test/releases/download/main-59e2e6c/output-txt2img.png" target="_blank" rel="noopener noreferrer">
-    <img width="250" src="https://github.com/paulocoutinhox/ai-sd-test/releases/download/main-59e2e6c/output-txt2img.png" alt="txt2img">
+<a href="https://github.com/paulocoutinhox/ai-sd-test/releases/download/main-1160702/output-txt2img.png" target="_blank" rel="noopener noreferrer">
+    <img width="250" src="https://github.com/paulocoutinhox/ai-sd-test/releases/download/main-1160702/output-txt2img.png" alt="txt2img">
 </a>
 
 ## Results - IMG TO IMG
 
-<a href="https://github.com/paulocoutinhox/ai-sd-test/releases/download/main-59e2e6c/output-img2img.png" target="_blank" rel="noopener noreferrer">
-    <img width="250" src="https://github.com/paulocoutinhox/ai-sd-test/releases/download/main-59e2e6c/output-img2img.png" alt="img2img">
+<a href="https://github.com/paulocoutinhox/ai-sd-test/releases/download/main-1160702/output-img2img.png" target="_blank" rel="noopener noreferrer">
+    <img width="250" src="https://github.com/paulocoutinhox/ai-sd-test/releases/download/main-1160702/output-img2img.png" alt="img2img">
 </a>
 
 ## Buy me a coffee
