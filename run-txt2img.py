@@ -25,6 +25,7 @@ pipe = pipe.to(torch_device)
 prompt = "a woman with red hair, realistic"
 negative_prompt = "tattooing, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, braid hair"
 
+# generate
 output = pipe(
     prompt=prompt,
     negative_prompt=negative_prompt,
@@ -32,5 +33,6 @@ output = pipe(
     guidance_scale=7.5,
 )
 
+# save image
 out_image = output.images[0]
 out_image.save("output-txt2img.png")
