@@ -43,6 +43,11 @@ jobs:
       - name: Build - TXT2IMG
         run: python3 run-img2img.py
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: output
+          path: "*.png"
+
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
