@@ -37,11 +37,16 @@ jobs:
       - name: Install python dependencies
         run: python3 -m pip install -r requirements.txt
 
-      - name: Build
-        run: python3 main.py
+      - name: Build - TXT2IMG
+        run: python3 run-txt2img.py
+
+      - name: Build - TXT2IMG
+        run: python3 run-img2img.py
 
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: output.png
+          files: |
+            output-txt2img.png
+            output-img2img.png

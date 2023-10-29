@@ -10,4 +10,4 @@ Thumb.sdb
 __pycache__
 *.lock
 temp/
-/output.*
+/output-*.*
