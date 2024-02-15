@@ -1,5 +1,4 @@
 torch
-diffusers
+diffusers @ git+https://github.com/kashif/diffusers.git@wuerstchen-v3
 accelerate
 transformers
-xformers

@@ -24,4 +24,4 @@ A simple example showing how to use "Stable Diffusion" and "Python".
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2023, Paulo Coutinho
+Copyright (c) 2024, Paulo Coutinho
