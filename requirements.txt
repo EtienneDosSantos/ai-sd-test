@@ -2,4 +2,3 @@ torch
 diffusers
 accelerate
 transformers
-xformers

@@ -43,6 +43,9 @@ jobs:
       - name: Build - TXT2IMG
         run: python3 run-img2img.py
 
+      - name: Build - UPSCALE
+        run: python3 run-upscale.py
+
       - uses: actions/upload-artifact@v3
         with:
           name: output
@@ -55,3 +58,4 @@ jobs:
           files: |
             output-txt2img.png
             output-img2img.png
+            output-upscale.png
