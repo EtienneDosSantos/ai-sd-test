@@ -1,3 +1,5 @@
+import platform
+
 import torch
 from diffusers import StableCascadeDecoderPipeline, StableCascadePriorPipeline
 
@@ -10,6 +12,11 @@ torch_device = (
 )
 
 dtype = torch.bfloat16
+
+if platform.system() == "Darwin":
+    if platform.machine() == "arm64":
+        torch_device = "mps"
+        dtype = None
 
 # model
 prior = StableCascadePriorPipeline.from_pretrained(
