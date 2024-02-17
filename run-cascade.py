@@ -22,6 +22,8 @@ prior = StableCascadePriorPipeline.from_pretrained(
 decoder = StableCascadeDecoderPipeline.from_pretrained(
     "stabilityai/stable-cascade",
     torch_dtype=dtype,
+    low_cpu_mem_usage=False,
+    ignore_mismatched_sizes=True,
 ).to(torch_device)
 
 # prompt
