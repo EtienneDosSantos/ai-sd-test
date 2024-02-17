@@ -15,16 +15,18 @@ dtype = torch.bfloat16
 prior = StableCascadePriorPipeline.from_pretrained(
     "stabilityai/stable-cascade-prior",
     torch_dtype=dtype,
-    low_cpu_mem_usage=False,
-    ignore_mismatched_sizes=True,
 ).to(torch_device)
 
 decoder = StableCascadeDecoderPipeline.from_pretrained(
     "stabilityai/stable-cascade",
     torch_dtype=dtype,
-    low_cpu_mem_usage=False,
-    ignore_mismatched_sizes=True,
 ).to(torch_device)
+
+model_cpu_offload = False
+
+if model_cpu_offload:
+    prior.enable_model_cpu_offload()
+    decoder.enable_model_cpu_offload()
 
 # prompt
 prompt = "a woman with red hair, realistic"
@@ -40,6 +42,7 @@ prior_output = prior(
     negative_prompt=negative_prompt,
     guidance_scale=4.0,
     num_images_per_prompt=num_images_per_prompt,
+    num_inference_steps=20,
 )
 
 decoder_output = decoder(
@@ -48,6 +51,7 @@ decoder_output = decoder(
     negative_prompt=negative_prompt,
     guidance_scale=0.0,
     output_type="pil",
+    num_inference_steps=10,
 ).images
 
 # save image
