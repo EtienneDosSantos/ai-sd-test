@@ -2,3 +2,4 @@ torch
 diffusers
 accelerate
 transformers
+torchvision
